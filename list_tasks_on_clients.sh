@@ -10,6 +10,14 @@ function get_nodes() {
   print_array $nodes
 }
 
+function get_nodes_json() {
+  # cat /tmp/nodes | 
+  nomad node status |
+    sed '1d' | sed 's/  */ /g' |
+    jq -R 'split(" ")|{id:.[0], dc:.[1], node:.[2], drain:.[4], eligible:.[5], status:.[6]}' | 
+    jq -s
+}
+
 # list tasks running on one node
 function tasks_on_node() {
     node=$1
@@ -17,8 +25,47 @@ function tasks_on_node() {
     print_array $tasks
 }
 
-# get_nodes
-# tasks_on_node 00d472b7
+function tasks_on_node_json() {
+  # cat /tmp/allocs.eude1 | 
+  node=$1
+  nomad node status -short $node |
+    sed -e '1,/Allocations/d' | sed '1d' | sed 's/  */ /g' | sort |
+    jq -R 'split(" ")|{id:.[0], task:.[2], status:.[5]}' | 
+    jq -s
+}
+
+# creates files for each node in `tasks` dir with the tasks listed
+function get_tasks_on_nodes() {
+    readarray -t nodes < <(get_nodes_json | jq -c '.[]')
+    for item in ${nodes[@]}; do
+      echo $item
+      node=$(echo $item | jq -r '.node')
+      id=$(echo $item | jq -r '.id')
+      tasks_file=tasks/$node.tasks
+
+      cat > $tasks_file <<EOF
+node: $node 
+
+id: $id 
+
+=====
+tasks:
+
+$(tasks_on_node $id)
+EOF
+
+    done
+}
 
 # 925b1a42 = eu-de1-01
-tasks_on_node 925b1a42
+# tasks_on_node 925b1a42
+
+# get_nodes_json
+# tasks_on_node_json 925b1a42
+# tasks_on_node_json 4485843e
+
+# tasks_on_node b68d9175
+# tasks_on_node_json b68d9175
+
+# get_tasks_on_nodes
+tasks_on_node 1267a13c #907434b9 #435fc808
