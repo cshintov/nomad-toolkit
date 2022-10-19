@@ -13,7 +13,7 @@ IFS='
 for job in $jobs 
 do
     
-    hosts=$(./job_on_host.sh $job | sort -u )
+    hosts=$(job_on_host.sh $job | sort -u )
     if [[ $hosts == "" ]]; then
         echo "No such jobs running..."
     else

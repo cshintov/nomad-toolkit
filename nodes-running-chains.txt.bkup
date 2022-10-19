@@ -1,0 +1,92 @@
+eu-de1-02
+eu-de1-03
+eu-de1-02
+eu-de1-03
+eu-de1-08
+eu-de1-01
+eu-de1-06
+eu-de1-07
+eu-de1-01
+eu-de1-06
+eu-de1-07
+Job cardano-mainnet-db-eu-de1-02 allocations are on these hosts:
+eu-de1-02
+Job cardano-mainnet-db-eu-de1-03 allocations are on these hosts:
+eu-de1-03
+Job cardano-mainnet-db-eu-de1-08 allocations are on these hosts:
+eu-de1-08
+eu-de1-03
+eu-de1-08
+Job cardano-mainnet-node-ogmios-eu-de1-02 allocations are on these hosts:
+eu-de1-02
+Job cardano-mainnet-node-ogmios-eu-de1-03 allocations are on these hosts:
+eu-de1-03
+Job cardano-mainnet-node-ogmios-eu-de1-08 allocations are on these hosts:
+eu-de1-08
+eu-de1-02
+eu-de1-03
+eu-de1-10
+eu-de1-02
+eu-de1-03
+eu-de1-09
+Job ethereum-mainnet allocations are on these hosts:
+eu-de1-app01
+eu-de1-app02
+eu-de1-app03
+Job ethereum-mainnet-archive allocations are on these hosts:
+eu-de1-01
+eu-de1-03
+eu-de1-08
+eu-de1-01
+eu-de1-07
+eu-de1-09
+eu-de1-01
+eu-de1-02
+eu-de1-03
+eu-de1-01
+eu-de1-02
+eu-de1-03
+eu-de1-12
+eu-de1-01
+eu-de1-08
+eu-de1-09
+eu-de1-11
+eu-de1-02
+eu-de1-03
+eu-de1-02
+eu-de1-03
+eu-de1-08
+eu-de1-01
+eu-de1-06
+eu-de1-07
+eu-de1-01
+eu-de1-08
+Job cardano-testnet-db-eu-de1-02 allocations are on these hosts:
+eu-de1-02
+Job cardano-testnet-db-eu-de1-03 allocations are on these hosts:
+eu-de1-03
+Job cardano-testnet-db-eu-de1-08 allocations are on these hosts:
+eu-de1-08
+Job cardano-testnet-node-ogmios-eu-de1-02 allocations are on these hosts:
+eu-de1-02
+Job cardano-testnet-node-ogmios-eu-de1-03 allocations are on these hosts:
+eu-de1-03
+Job cardano-testnet-node-ogmios-eu-de1-08 allocations are on these hosts:
+eu-de1-08
+eu-de1-02
+eu-de1-03
+eu-de1-08
+eu-de1-02
+eu-de1-03
+eu-de1-10
+eu-de1-02
+eu-de1-03
+eu-de1-09
+eu-de1-01
+eu-de1-07
+eu-de1-09
+Job mempool-eu-de1_testnet allocations are on these hosts:
+eu-de1-app02
+eu-de1-01
+eu-de1-02
+eu-de1-03
