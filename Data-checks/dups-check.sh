@@ -1,7 +1,9 @@
+set -e
+
 function wrap {
     mkdir -p ${logPath}
     bridge=$1
-    executeSql "${bridge}" "${query}" &
+    executeSql "${bridge}" &
 }
 
 function executeSql {

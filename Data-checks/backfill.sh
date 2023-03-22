@@ -14,7 +14,7 @@ gapBlock=$(executeSql)
 queryLast="select block_number from scanner_state ORDER by block_number desc limit 1;"
 query=$queryLast
 lastBlock=$(executeSql)
-if [[ $(expr $lastBlock - $gapBlock) -gt 1000 ]]; then
+if [[ $(expr $lastBlock - $gapBlock) -gt 300 ]]; then
     queryHigh="select block_number from scanner_state where block_number > $gapBlock order by block_number limit 1"
     query=$queryHigh
     highBlock=$(executeSql)
@@ -29,7 +29,7 @@ if [[ $(expr $lastBlock - $gapBlock) -gt 1000 ]]; then
     argo submit --wait backfill-$chain.yaml -p backfill-from=$gapBlock -p backfill-to=$highBlock
     sleep 5
     echo "Scale up continuous block ingest for $chain"
-    echo kubectl scale --replicas=1 deployment/continuous-$chain
+    kubectl scale --replicas=1 deployment/continuous-$chain
 else
     echo "No gaps found!"
 fi

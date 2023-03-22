@@ -1,7 +1,8 @@
+set -e
 function wrap {
     mkdir -p ${logPath}
     bridge=$1
-    executeSql "${bridge}" "${query}" > ${logPath}/gaps-${bridge}-latest.log &
+    executeSql "${bridge}" > ${logPath}/gaps-${bridge}-latest.log &
 }
 
 function executeSql {
@@ -15,7 +16,8 @@ function executeSql {
     queryLast="select block_number from scanner_state ORDER by block_number desc limit 1;"
     lastBlock=$(kubectl run psql-client-gaps-${bridge}-${sfx}-1 --namespace blockchain-data --image postgres:14 --attach --restart=Never -- psql -t -p 5432 -h ttm-bridge-${bridge}-v1 -c "${queryLast}" 2>/dev/null | awk '{print $1}')
     kubectl delete pods/psql-client-gaps-${bridge}-${sfx}-1 --namespace blockchain-data >/dev/null
-    if [[ $(expr $lastBlock - $gapBlock) -gt 1000 ]]; then
+
+    if [[ $(expr $lastBlock - $gapBlock) -gt 300 ]]; then
         echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) - $bridge - ERROR: there is a gap at block: $gapBlock and blockchain local tip is at $lastBlock!" #> ${logPath}/gaps-${bridge}-latest.log
     else
         echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) - $bridge - INFO: there is no gap until now and blockchain local tip is at $lastBlock." #> ${logPath}/gaps-${bridge}-latest.log
