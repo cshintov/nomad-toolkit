@@ -1,4 +1,5 @@
 #!/Users/Shinto/.pyenv/shims/python
+
 """
 Blockchain node upgrades are hard. It's manual, it's error prone, and it's a pain to do repeatedly.
 This script is a first step towards automating the upgrade process. It won't be perfect,
@@ -15,6 +16,7 @@ This script will do the following:
         - let's start with this, sometimes we weill have to build the image from binary
     - update image, push, get commit hash
     - add variable for canary image in the nomad job spec
+        - ref: https://github.com/hashicorp/nomad/pull/12591
     - get node in eu by hitting nomad api
     - add `!=` constraint for the node
     - scale down in eu (run the nomad job spec)
@@ -35,7 +37,6 @@ This script will do the following:
 """
 
 """"
-
 First let's do the following:
     - get version from branch name
         - the name will be like: `feature/ALL-899-upgrade-goerli-prysm-to-v3.2.2`
@@ -56,12 +57,12 @@ def get_version_from_branch_name(branch_name):
     return branch_name.split("-")[-1]
 
 """
-We can get the image name from the dockerfile. We could in theory get the image name from the
-branch_name, but that would complicate things, when there are multiple compoenents in the nomad
-job. So let's take it as the first parameter. Let's say we standardize the dockerfile names
-as component.Dockerfile. For example, `prysm.Dockerfile` or `geth.Dockerfile`.
+We can get the image name from the dockerfile.So let's take it as the first
+parameter. Let's say we standardize the dockerfile names as
+component.Dockerfile. For example, `prysm.Dockerfile` or `geth.Dockerfile`.
 
-Then the first parameter should be the component name, for example `prysm` or `geth`.
+Then the first parameter should be the component name, for example `prysm` or
+`geth`.
 """
 
 def get_image_data_from_dockerfile(component_name):
@@ -85,7 +86,6 @@ Now we can verify whether the image exist in dockerhub. Combine the image name a
 def verify_image_exist_in_dockerhub(image_name, version):
     """Verify image exist in dockerhub"""
     return os.system(f"docker manifest inspect {image_name}:{version} >/dev/null") == 0
-
 
 """ Tests disabled for now, need to figure out how to mock gcloud. Slow. """
 def verify_image_exist_in_gcr(image_name, version):
