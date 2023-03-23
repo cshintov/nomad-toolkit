@@ -1,6 +1,8 @@
 # import get_branch_name from upgrade.py
 
 import pytest
+import random
+import string
 from upgrade import *
 
 """
@@ -30,7 +32,7 @@ dockerfile with that name.
 def test_get_image_name_from_dockerfile():
     """Test get_image_name_from_dockerfile"""
 
-    assert get_image_data_from_dockerfile("prysm") == ["gcr.io/prysmaticlabs/prysm/beacon-chain", "v3.2.2"]
+    assert get_image_data_from_dockerfile("prysm") == ["gcr.io/prysmaticlabs/prysm/beacon-chain", "v3.2.0"]
     assert get_image_data_from_dockerfile("geth") == ["ethereum/client-go", "v1.11.3"]
 
 """
@@ -92,3 +94,46 @@ def test_update_dockerfile():
 
     with open(f"{component}.Dockerfile", "w") as f:
         f.write(old_content)
+
+#TODO: git commit, push to origin, get commit hash
+""" Now once the dockerfile is updated, we need to commit the changes and push to origin. """
+
+
+def create_dummy_file():
+    """Create dummy file"""
+    with open("dummy", "w") as f:
+        f.write("dummy")
+
+
+def get_random_string(length):
+    """Get random string"""
+    letters = string.ascii_lowercase
+    return "".join(random.choice(letters) for i in range(length))
+
+
+@pytest.mark.skip(reason="Need to mock git commit")
+def test_git_commit():
+    """Test git_commit"""
+
+    suffix = get_random_string(5)
+
+    create_dummy_file()
+    git_commit(f"dummy-{suffix}")
+
+    latest_commit = repo.head.commit
+    commit_message = latest_commit.message.strip()
+    assert commit_message == f"dummy-{suffix}"
+
+
+def is_current_head_is_pointing_to_current_branch():
+    """
+    Verify current HEAD is pointing to <current_branch> and origin/<current_branch>
+    """
+    current_branch = repo.active_branch.name
+    return repo.head.commit == repo.commit(f"origin/{current_branch}")
+
+
+@pytest.mark.skip(reason="Need to mock git push")
+def test_git_push():
+    git_push()
+    assert is_current_head_is_pointing_to_current_branch()

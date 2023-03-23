@@ -47,6 +47,11 @@ First let's do the following:
 
 import os
 import subprocess
+import git
+
+REPO_PATH = '..'
+
+repo = git.Repo(REPO_PATH)
 
 def get_branch_name():
     """Get branch name from git"""
@@ -135,8 +140,19 @@ def update_dockerfile(component, new_version):
     new_base = f"FROM {current_image}:{new_version}\n"
     update_the_first_line(f"{component}.Dockerfile", new_base)
 
-#TODO: update_dockerfile function "as upstream" gets removed from prysm
-#TODO: git commit, push to origin, get commit hash
+def git_commit(message):
+    """Git commit"""
+    repo.git.add(".")
+    repo.git.commit(m=message)
+
+def git_push():
+    """ Git push to origin with current branch name"""
+    repo.git.push("--set-upstream", "origin", get_branch_name())
+
+def get_commit_hash():
+    """Git commit hash"""
+    return repo.head.object.hexsha
+
 
 if __name__ == "__main__":
     branch_name = get_branch_name()
