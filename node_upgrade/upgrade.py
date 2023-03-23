@@ -84,7 +84,6 @@ def get_image_data_from_dockerfile(component_name):
     # Return the image name and the version
     return image.split(":")
 
-
 """
 Now we can verify whether the image exist in dockerhub. Combine the image name and the version.
 """
@@ -153,7 +152,6 @@ def git_push():
 def get_commit_hash():
     """Git commit hash"""
     return repo.head.object.hexsha
-
 
 if __name__ == "__main__":
     branch_name = get_branch_name()
