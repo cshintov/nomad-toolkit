@@ -15,6 +15,7 @@ This script will do the following:
     - verify the image exist in dockerhub
         - let's start with this, sometimes we weill have to build the image from binary
     - update image, push, get commit hash
+
     - add variable for canary image in the nomad job spec
         - ref: https://github.com/hashicorp/nomad/pull/12591
     - get node in eu by hitting nomad api
