@@ -1,125 +1,263 @@
-Unknown size "30.6 K" for blockchain "data-pool/bnb-mainnet" on node "us-west1-08"
-Unknown size "107.0 K" for blockchain "data-pool/bnb-testnet" on node "eu-de1-14"
-Unknown size "107.0 K" for blockchain "data-pool/bnb-testnet" on node "eu-de1-app01"
-Unknown size "109.0 K" for blockchain "data-pool/bnb-testnet" on node "eu-de1-15"
-Unknown size "33.3 K" for blockchain "data-pool/bnb-testnet" on node "eu-de1-10"
-Unknown size "394.0 K" for blockchain "data-pool/bnb-testnet" on node "us-west1-09"
-Unknown size "416.0 K" for blockchain "data-pool/bnb-testnet" on node "us-west1-12"
-Unknown size "448.0 K" for blockchain "data-pool/bnb-testnet" on node "us-west1-10"
-Unknown size "742.0 M" for blockchain "data-pool/docker" on node "eu-de1-17"
-Unknown size "64.6 M" for blockchain "data-pool/docker/1fcc5324b6bfa743316ac2a78325c32f9d51ceb345d2d9ebdbe8465c7fd3c826" on node "eu-de1-17"
-Unknown size "23.1 M" for blockchain "data-pool/docker/31e9b1cab9b71e881df35db9bac1d2882b0c09560a1d23aba846192031b57f5c" on node "eu-de1-17"
-Unknown size "1.26 M" for blockchain "data-pool/docker/38b1c991efb59b548bc83cc6402f03ce6d48fd3163324b229b089871c11401d2" on node "eu-de1-17"
-Unknown size "53.6 M" for blockchain "data-pool/docker/38e00639eac007ee0cdf8036b8927c03f738f856c8fd21780031061ba948a885" on node "eu-de1-17"
-Unknown size "436.0 K" for blockchain "data-pool/docker/528d07142bbf4c7e51ced997580124eec5092a5da76d65a63644a721e09f7d98" on node "eu-de1-17"
-Unknown size "136.0 K" for blockchain "data-pool/docker/528d07142bbf4c7e51ced997580124eec5092a5da76d65a63644a721e09f7d98-init" on node "eu-de1-17"
-Unknown size "104.0 M" for blockchain "data-pool/docker/53d40ac3471c4037af5d20d1c451f1ff228f70595aaac1f62dd8ffb9ddf3ef55" on node "eu-de1-17"
-Unknown size "148.0 K" for blockchain "data-pool/docker/55dc17e0f2058a7cece04b5e5d6f69207916c920ce2a6d2a3da5db49dd6754a0" on node "eu-de1-17"
-Unknown size "7.91 M" for blockchain "data-pool/docker/6213e7322d22b6ba556b90bab34fc6e4e733c8f0f9dd88205555ae2a9df23b81" on node "eu-de1-17"
-Unknown size "100.0 K" for blockchain "data-pool/docker/657a2846f61f46d791cd30912ddab489ca5022e540bf21cfcd65652955e99b40" on node "eu-de1-17"
-Unknown size "148.0 K" for blockchain "data-pool/docker/6fa30b84d14205ca716c44c9e2877b8e8c4bf4e57746c768dacf4c7133bea9fb" on node "eu-de1-17"
-Unknown size "1.25 M" for blockchain "data-pool/docker/99a8e4f251067eac1bd605899b2c0667299219038131c43fd04becc9b2f6e0d6" on node "eu-de1-17"
-Unknown size "95.5 M" for blockchain "data-pool/docker/9b92e3285920d97bb45b0811857ca28df6949e197cae5bf25419c76179e9edb7" on node "eu-de1-17"
-Unknown size "176.0 K" for blockchain "data-pool/docker/9fd97cd3db68458afa172ee26658f92bbd4b26d979e20084d13b64758ac212fc" on node "eu-de1-17"
-Unknown size "136.0 K" for blockchain "data-pool/docker/9fd97cd3db68458afa172ee26658f92bbd4b26d979e20084d13b64758ac212fc-init" on node "eu-de1-17"
-Unknown size "53.8 M" for blockchain "data-pool/docker/a3a100a700b83b6f8fb6692debbaf7a8e865cb8004ca5571876fce34ba84083b" on node "eu-de1-17"
-Unknown size "116.0 K" for blockchain "data-pool/docker/babf657ee1525f2ceb42b979014fb7fdc2cb52fe8de9d06d325bbd475bb9fa42" on node "eu-de1-17"
-Unknown size "82.0 M" for blockchain "data-pool/docker/bbbd8b5c8ce1d1c43097511b8808271404ae0f26cf7baa6a41d1e90698a27f1c" on node "eu-de1-17"
-Unknown size "14.2 M" for blockchain "data-pool/docker/cd0cfa4b423a2c922a0eb1e662ee97f1d00b898592c7400b1d887210fe025c9c" on node "eu-de1-17"
-Unknown size "112.0 K" for blockchain "data-pool/docker/d0e126504965e1952437fef44cc455b868af5ca9891dd778d494a98a89c6fbe6" on node "eu-de1-17"
-Unknown size "128.0 K" for blockchain "data-pool/docker/d0e126504965e1952437fef44cc455b868af5ca9891dd778d494a98a89c6fbe6-init" on node "eu-de1-17"
-Unknown size "15.4 M" for blockchain "data-pool/docker/d236bb082dd52389750359864cfe48ed35e99b959bd0def3459d330627dc7bb5" on node "eu-de1-17"
-Unknown size "124.0 K" for blockchain "data-pool/docker/d71afe1808d4c5cbd8c6f440a6ae3a680a05eebf2ed2f6c6209bfcc88eab50f2" on node "eu-de1-17"
-Unknown size "116.0 K" for blockchain "data-pool/docker/dd3e7492ccf2c73e8a7bbdc8bf8c64a85a2c824c7c1bc9f95650d3ccd66961c3" on node "eu-de1-17"
-Unknown size "116.0 K" for blockchain "data-pool/docker/df718d1996b4c24ccc567494f0012e2c77bb4dcb40fa093fa0357217e1127642" on node "eu-de1-17"
-Unknown size "23.2 M" for blockchain "data-pool/docker/f6d2a0c66055aa9b09a5418735be47b187eecc27f168bb060926003697ba483b" on node "eu-de1-17"
-Unknown size "128.0 K" for blockchain "data-pool/docker/f9f66e249e2b9e4ad199c42f919bff385c91c435dd289cedf0c72eccaf7df8f2" on node "eu-de1-17"
-Unknown size "95.5 M" for blockchain "data-pool/docker/fea5da470d3d6ff6c4232f05782d9ba6a3d8e46861272c3479274c74250056a3" on node "eu-de1-17"
-Unknown size "148.0 K" for blockchain "data-pool/docker/ff2b0da554fb662a10283e728584458b248571b019c21651a50c47da7ef50190" on node "eu-de1-17"
-Unknown size "268.0 M" for blockchain "data-pool/preprod-userdb-us-west1" on node "us-west1-03"
-Unknown size "416.0 M" for blockchain "data-pool/preprod-userdb-us-west1" on node "us-west1-01"
-Blockchain sizes:
-data-pool/algorand-mainnet - 3.94 TB
-data-pool/algorand-testnet - 1.01 TB
-data-pool/bch-mainnet - 379.67 GB
-data-pool/bch-testnet - 51.75 GB
-data-pool/bitcoin-core-mainnet - 540.00 GB
-data-pool/bitcoin-core-testnet - 35.00 GB
-data-pool/bitcoin-mainnet - 539.00 GB
-data-pool/blockchains-data-1 - 3.14 TB
-data-pool/blockchains-data-2 - 5.38 TB
-data-pool/bnb-mainnet - 1.57 TB
-data-pool/bnb-testnet - 230.61 GB
-data-pool/bsc-mainnet - 3.62 TB
-data-pool/bsc-testnet - 306.00 GB
-data-pool/cardano-mainnet - 687.17 GB
-data-pool/cardano-testnet - 26.53 GB
-data-pool/celo-mainnet-archive - 1.63 TB
-data-pool/celo-testnet-archive - 290.67 GB
-data-pool/docker - 742.00 GB
-data-pool/docker/1fcc5324b6bfa743316ac2a78325c32f9d51ceb345d2d9ebdbe8465c7fd3c826 - 64.60 GB
-data-pool/docker/31e9b1cab9b71e881df35db9bac1d2882b0c09560a1d23aba846192031b57f5c - 23.10 GB
-data-pool/docker/38b1c991efb59b548bc83cc6402f03ce6d48fd3163324b229b089871c11401d2 - 1.26 GB
-data-pool/docker/38e00639eac007ee0cdf8036b8927c03f738f856c8fd21780031061ba948a885 - 53.60 GB
-data-pool/docker/528d07142bbf4c7e51ced997580124eec5092a5da76d65a63644a721e09f7d98 - 436.00 GB
-data-pool/docker/528d07142bbf4c7e51ced997580124eec5092a5da76d65a63644a721e09f7d98-init - 136.00 GB
-data-pool/docker/53d40ac3471c4037af5d20d1c451f1ff228f70595aaac1f62dd8ffb9ddf3ef55 - 104.00 GB
-data-pool/docker/55dc17e0f2058a7cece04b5e5d6f69207916c920ce2a6d2a3da5db49dd6754a0 - 148.00 GB
-data-pool/docker/6213e7322d22b6ba556b90bab34fc6e4e733c8f0f9dd88205555ae2a9df23b81 - 7.91 GB
-data-pool/docker/657a2846f61f46d791cd30912ddab489ca5022e540bf21cfcd65652955e99b40 - 100.00 GB
-data-pool/docker/6fa30b84d14205ca716c44c9e2877b8e8c4bf4e57746c768dacf4c7133bea9fb - 148.00 GB
-data-pool/docker/99a8e4f251067eac1bd605899b2c0667299219038131c43fd04becc9b2f6e0d6 - 1.25 GB
-data-pool/docker/9b92e3285920d97bb45b0811857ca28df6949e197cae5bf25419c76179e9edb7 - 95.50 GB
-data-pool/docker/9fd97cd3db68458afa172ee26658f92bbd4b26d979e20084d13b64758ac212fc - 176.00 GB
-data-pool/docker/9fd97cd3db68458afa172ee26658f92bbd4b26d979e20084d13b64758ac212fc-init - 136.00 GB
-data-pool/docker/a3a100a700b83b6f8fb6692debbaf7a8e865cb8004ca5571876fce34ba84083b - 53.80 GB
-data-pool/docker/babf657ee1525f2ceb42b979014fb7fdc2cb52fe8de9d06d325bbd475bb9fa42 - 116.00 GB
-data-pool/docker/bbbd8b5c8ce1d1c43097511b8808271404ae0f26cf7baa6a41d1e90698a27f1c - 82.00 GB
-data-pool/docker/cd0cfa4b423a2c922a0eb1e662ee97f1d00b898592c7400b1d887210fe025c9c - 14.20 GB
-data-pool/docker/d0e126504965e1952437fef44cc455b868af5ca9891dd778d494a98a89c6fbe6 - 112.00 GB
-data-pool/docker/d0e126504965e1952437fef44cc455b868af5ca9891dd778d494a98a89c6fbe6-init - 128.00 GB
-data-pool/docker/d236bb082dd52389750359864cfe48ed35e99b959bd0def3459d330627dc7bb5 - 15.40 GB
-data-pool/docker/d71afe1808d4c5cbd8c6f440a6ae3a680a05eebf2ed2f6c6209bfcc88eab50f2 - 124.00 GB
-data-pool/docker/dd3e7492ccf2c73e8a7bbdc8bf8c64a85a2c824c7c1bc9f95650d3ccd66961c3 - 116.00 GB
-data-pool/docker/df718d1996b4c24ccc567494f0012e2c77bb4dcb40fa093fa0357217e1127642 - 116.00 GB
-data-pool/docker/f6d2a0c66055aa9b09a5418735be47b187eecc27f168bb060926003697ba483b - 23.20 GB
-data-pool/docker/f9f66e249e2b9e4ad199c42f919bff385c91c435dd289cedf0c72eccaf7df8f2 - 128.00 GB
-data-pool/docker/fea5da470d3d6ff6c4232f05782d9ba6a3d8e46861272c3479274c74250056a3 - 95.50 GB
-data-pool/docker/ff2b0da554fb662a10283e728584458b248571b019c21651a50c47da7ef50190 - 148.00 GB
-data-pool/dogecoin-mainnet - 64.35 GB
-data-pool/dogecoin-testnet - 3.55 GB
-data-pool/eos-mainnet-archive - 444.00 GB
-data-pool/eos-testnet-archive - 28.70 GB
-data-pool/etc-dump - 699.00 GB
-data-pool/ethereum-classic-archive - 1.42 TB
-data-pool/ethereum-goerli - 514.67 GB
-data-pool/ethereum-goerli-archive - 660.75 GB
-data-pool/ethereum-mainnet - 1.93 TB
-data-pool/ethereum-mainnet-archive - 3.34 TB
-data-pool/ethereum-mainnet-pebble-sync - 1.01 TB
-data-pool/ethereum-sepolia - 21.17 GB
-data-pool/ethereum-sepolia-archive - 37.58 GB
-data-pool/jdtest - 250.00 GB
-data-pool/klaytn-baobab - 438.25 GB
-data-pool/klaytn-baobab-archive - 1.52 TB
-data-pool/klaytn-cypress - 3.86 TB
-data-pool/klaytn-cypress-archive - 13.70 TB
-data-pool/litecoin-mainnet-core - 110.33 GB
-data-pool/litecoin-testnet-core - 4.63 GB
-data-pool/polygon-mainnet - 5.92 TB
-data-pool/polygon-mainnet-archive - 32.80 TB
-data-pool/polygon-mumbai - 650.50 GB
-data-pool/polygon-mumbai-archive - 3.03 TB
-data-pool/preprod-userdb-us-west1 - 342.00 GB
-data-pool/ripple-mainnet - 906.83 GB
-data-pool/ripple-testnet - 150.00 GB
-data-pool/solana-devnet - 1.16 TB
-data-pool/solana-ledger - 3.54 TB
-data-pool/solana-snapshots - 115.50 GB
-data-pool/tezos-mainnet - 1.69 TB
-data-pool/tezos-testnet - 459.67 GB
-data-pool/tezos-tzindex-mainnet - 64.90 GB
-data-pool/tron-mainnet - 1.69 TB
-data-pool/userdb-us-west1 - 8.70 GB
-data-pool/zcash-mainnet - 230.67 GB
-data-pool/zcash-testnet - 12.09 GB
+algorand-mainnet - 3300.00 GB
+algorand-mainnet - 3610.00 GB
+algorand-mainnet - 3620.00 GB
+algorand-mainnet - 3620.00 GB
+algorand-mainnet - 4390.00 GB
+algorand-mainnet - 5100.00 GB
+algorand-testnet - 1010.00 GB
+algorand-testnet - 1110.00 GB
+algorand-testnet - 1110.00 GB
+algorand-testnet - 949.00 GB
+algorand-testnet - 951.00 GB
+algorand-testnet - 951.00 GB
+bch-mainnet - 257.00 GB
+bch-mainnet - 257.00 GB
+bch-mainnet - 257.00 GB
+bch-mainnet - 502.00 GB
+bch-mainnet - 502.00 GB
+bch-mainnet - 503.00 GB
+bch-testnet - 51.70 GB
+bch-testnet - 51.70 GB
+bch-testnet - 51.70 GB
+bch-testnet - 51.80 GB
+bch-testnet - 51.80 GB
+bch-testnet - 51.80 GB
+bitcoin-core-mainnet - 540.00 GB
+bitcoin-core-mainnet - 540.00 GB
+bitcoin-core-mainnet - 540.00 GB
+bitcoin-core-mainnet - 540.00 GB
+bitcoin-core-mainnet - 540.00 GB
+bitcoin-core-mainnet - 540.00 GB
+bitcoin-core-testnet - 35.00 GB
+bitcoin-core-testnet - 35.00 GB
+bitcoin-core-testnet - 35.00 GB
+bitcoin-core-testnet - 35.00 GB
+bitcoin-core-testnet - 35.00 GB
+bitcoin-core-testnet - 35.00 GB
+bitcoin-mainnet - 539.00 GB
+blockchains-data-1 - 2820.00 GB
+blockchains-data-1 - 2840.00 GB
+blockchains-data-1 - 3140.00 GB
+blockchains-data-1 - 3750.00 GB
+blockchains-data-2 - 5330.00 GB
+blockchains-data-2 - 5340.00 GB
+blockchains-data-2 - 5360.00 GB
+blockchains-data-2 - 5510.00 GB
+bnb-mainnet - 1410.00 GB
+bnb-mainnet - 2420.00 GB
+bnb-mainnet - 2420.00 GB
+bnb-mainnet - 0.03 TB
+bnb-testnet - 0.11 TB
+bnb-testnet - 0.11 TB
+bnb-testnet - 0.11 TB
+bnb-testnet - 0.03 TB
+bnb-testnet - 0.39 TB
+bnb-testnet - 0.42 TB
+bnb-testnet - 0.45 TB
+bsc-mainnet - 2430.00 GB
+bsc-mainnet - 2430.00 GB
+bsc-mainnet - 2430.00 GB
+bsc-mainnet - 2520.00 GB
+bsc-mainnet - 5850.00 GB
+bsc-mainnet - 6030.00 GB
+bsc-testnet - 292.00 GB
+bsc-testnet - 292.00 GB
+bsc-testnet - 315.00 GB
+bsc-testnet - 325.00 GB
+cardano-mainnet - 450.00 GB
+cardano-mainnet - 686.00 GB
+cardano-mainnet - 689.00 GB
+cardano-mainnet - 705.00 GB
+cardano-mainnet - 765.00 GB
+cardano-mainnet - 828.00 GB
+cardano-testnet - 18.90 GB
+cardano-testnet - 19.40 GB
+cardano-testnet - 19.90 GB
+cardano-testnet - 33.30 GB
+cardano-testnet - 33.80 GB
+cardano-testnet - 33.90 GB
+celo-mainnet-archive - 1630.00 GB
+celo-mainnet-archive - 1630.00 GB
+celo-mainnet-archive - 1630.00 GB
+celo-mainnet-archive - 1630.00 GB
+celo-mainnet-archive - 1630.00 GB
+celo-mainnet-archive - 1640.00 GB
+celo-testnet-archive - 290.00 GB
+celo-testnet-archive - 290.00 GB
+celo-testnet-archive - 291.00 GB
+celo-testnet-archive - 291.00 GB
+celo-testnet-archive - 291.00 GB
+celo-testnet-archive - 291.00 GB
+dogecoin-mainnet - 64.30 GB
+dogecoin-mainnet - 64.30 GB
+dogecoin-mainnet - 64.30 GB
+dogecoin-mainnet - 64.40 GB
+dogecoin-mainnet - 64.40 GB
+dogecoin-mainnet - 64.40 GB
+dogecoin-testnet - 3.53 GB
+dogecoin-testnet - 3.53 GB
+dogecoin-testnet - 3.56 GB
+dogecoin-testnet - 3.56 GB
+dogecoin-testnet - 3.56 GB
+dogecoin-testnet - 3.59 GB
+eos-mainnet-archive - 442.00 GB
+eos-mainnet-archive - 442.00 GB
+eos-mainnet-archive - 442.00 GB
+eos-mainnet-archive - 450.00 GB
+eos-testnet-archive - 28.70 GB
+eos-testnet-archive - 28.70 GB
+eos-testnet-archive - 28.70 GB
+eos-testnet-archive - 28.70 GB
+etc-dump - 699.00 GB
+ethereum-classic-archive - 1420.00 GB
+ethereum-classic-archive - 1420.00 GB
+ethereum-classic-archive - 1420.00 GB
+ethereum-classic-archive - 1420.00 GB
+ethereum-goerli - 466.00 GB
+ethereum-goerli - 467.00 GB
+ethereum-goerli - 469.00 GB
+ethereum-goerli - 537.00 GB
+ethereum-goerli - 571.00 GB
+ethereum-goerli - 578.00 GB
+ethereum-goerli-archive - 551.00 GB
+ethereum-goerli-archive - 552.00 GB
+ethereum-goerli-archive - 556.00 GB
+ethereum-goerli-archive - 557.00 GB
+ethereum-goerli-archive - 757.00 GB
+ethereum-goerli-archive - 771.00 GB
+ethereum-goerli-archive - 771.00 GB
+ethereum-mainnet - 1560.00 GB
+ethereum-mainnet - 1560.00 GB
+ethereum-mainnet - 1850.00 GB
+ethereum-mainnet - 1850.00 GB
+ethereum-mainnet - 1850.00 GB
+ethereum-mainnet - 2020.00 GB
+ethereum-mainnet - 2030.00 GB
+ethereum-mainnet - 2340.00 GB
+ethereum-mainnet - 2340.00 GB
+ethereum-mainnet-archive - 1960.00 GB
+ethereum-mainnet-archive - 2060.00 GB
+ethereum-mainnet-archive - 2070.00 GB
+ethereum-mainnet-archive - 3020.00 GB
+ethereum-mainnet-archive - 3980.00 GB
+ethereum-mainnet-archive - 4450.00 GB
+ethereum-mainnet-archive - 5840.00 GB
+ethereum-mainnet-pebble-sync - 1005.00 GB
+ethereum-mainnet-pebble-sync - 1006.00 GB
+ethereum-sepolia - 16.30 GB
+ethereum-sepolia - 16.30 GB
+ethereum-sepolia - 16.30 GB
+ethereum-sepolia - 19.20 GB
+ethereum-sepolia - 27.70 GB
+ethereum-sepolia - 31.20 GB
+ethereum-sepolia-archive - 25.80 GB
+ethereum-sepolia-archive - 25.90 GB
+ethereum-sepolia-archive - 25.90 GB
+ethereum-sepolia-archive - 26.00 GB
+ethereum-sepolia-archive - 50.60 GB
+ethereum-sepolia-archive - 71.30 GB
+jdtest - 250.00 GB
+klaytn-baobab - 246.00 GB
+klaytn-baobab - 250.00 GB
+klaytn-baobab - 628.00 GB
+klaytn-baobab - 629.00 GB
+klaytn-baobab-archive - 1520.00 GB
+klaytn-baobab-archive - 1520.00 GB
+klaytn-baobab-archive - 1520.00 GB
+klaytn-baobab-archive - 1520.00 GB
+klaytn-cypress - 3290.00 GB
+klaytn-cypress - 4050.00 GB
+klaytn-cypress - 4050.00 GB
+klaytn-cypress - 4060.00 GB
+klaytn-cypress-archive - 13700.00 GB
+klaytn-cypress-archive - 13700.00 GB
+klaytn-cypress-archive - 13700.00 GB
+klaytn-cypress-archive - 13700.00 GB
+litecoin-mainnet-core - 110.00 GB
+litecoin-mainnet-core - 110.00 GB
+litecoin-mainnet-core - 110.00 GB
+litecoin-mainnet-core - 110.00 GB
+litecoin-mainnet-core - 110.00 GB
+litecoin-mainnet-core - 112.00 GB
+litecoin-testnet-core - 4.57 GB
+litecoin-testnet-core - 4.58 GB
+litecoin-testnet-core - 4.58 GB
+litecoin-testnet-core - 4.58 GB
+litecoin-testnet-core - 4.59 GB
+litecoin-testnet-core - 4.89 GB
+polygon-mainnet - 5590.00 GB
+polygon-mainnet - 6240.00 GB
+polygon-mainnet-archive - 29400.00 GB
+polygon-mainnet-archive - 30400.00 GB
+polygon-mainnet-archive - 32600.00 GB
+polygon-mainnet-archive - 33600.00 GB
+polygon-mainnet-archive - 38000.00 GB
+polygon-mumbai - 650.00 GB
+polygon-mumbai - 651.00 GB
+polygon-mumbai-archive - 2670.00 GB
+polygon-mumbai-archive - 2970.00 GB
+polygon-mumbai-archive - 2980.00 GB
+polygon-mumbai-archive - 2990.00 GB
+polygon-mumbai-archive - 3230.00 GB
+polygon-mumbai-archive - 3360.00 GB
+preprod-userdb-us-west1 - 268.00 TB
+preprod-userdb-us-west1 - 416.00 TB
+ripple-mainnet - 1140.00 GB
+ripple-mainnet - 729.00 GB
+ripple-mainnet - 830.00 GB
+ripple-mainnet - 842.00 GB
+ripple-mainnet - 949.00 GB
+ripple-mainnet - 951.00 GB
+ripple-testnet - 149.00 GB
+ripple-testnet - 150.00 GB
+ripple-testnet - 150.00 GB
+ripple-testnet - 150.00 GB
+ripple-testnet - 150.00 GB
+ripple-testnet - 151.00 GB
+solana-devnet - 1390.00 GB
+solana-devnet - 1710.00 GB
+solana-devnet - 736.00 GB
+solana-devnet - 810.00 GB
+solana-ledger - 3490.00 GB
+solana-ledger - 3490.00 GB
+solana-ledger - 3570.00 GB
+solana-ledger - 3600.00 GB
+solana-snapshots - 101.00 GB
+solana-snapshots - 101.00 GB
+solana-snapshots - 103.00 GB
+solana-snapshots - 157.00 GB
+tezos-mainnet - 1290.00 GB
+tezos-mainnet - 1290.00 GB
+tezos-mainnet - 1880.00 GB
+tezos-mainnet - 1880.00 GB
+tezos-mainnet - 1890.00 GB
+tezos-mainnet - 1890.00 GB
+tezos-testnet - 457.00 GB
+tezos-testnet - 460.00 GB
+tezos-testnet - 460.00 GB
+tezos-testnet - 460.00 GB
+tezos-testnet - 460.00 GB
+tezos-testnet - 461.00 GB
+tezos-tzindex-mainnet - 64.90 GB
+tron-mainnet - 1610.00 GB
+tron-mainnet - 1610.00 GB
+tron-mainnet - 1610.00 GB
+tron-mainnet - 1610.00 GB
+tron-mainnet - 1610.00 GB
+tron-mainnet - 1610.00 GB
+tron-mainnet - 1920.00 GB
+tron-mainnet - 1920.00 GB
+userdb-us-west1 - 8.64 GB
+userdb-us-west1 - 8.75 GB
+zcash-mainnet - 230.00 GB
+zcash-mainnet - 230.00 GB
+zcash-mainnet - 231.00 GB
+zcash-mainnet - 231.00 GB
+zcash-mainnet - 231.00 GB
+zcash-mainnet - 231.00 GB
+zcash-testnet - 12.80 GB
+zcash-testnet - 13.60 GB
+zcash-testnet - 17.70 GB
+zcash-testnet - 9.42 GB
+zcash-testnet - 9.44 GB
+zcash-testnet - 9.57 GB
