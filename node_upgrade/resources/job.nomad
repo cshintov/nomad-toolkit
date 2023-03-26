@@ -1,3 +1,7 @@
+variable "image" {
+  default = "ealen/echo-server"
+}
+
 job "hello-world" {
   region = "europe-central"
   datacenters = ["LIM1", "LIM3", "HIL1"]
@@ -17,7 +21,7 @@ job "hello-world" {
     task "hello" {
       driver = "docker"
       config {
-        image = "ealen/echo-server"
+        image = var.image
       }
 
       resources {

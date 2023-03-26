@@ -16,17 +16,21 @@ This script will do the following:
         - let's start with this, sometimes we weill have to build the image from binary
     - update image, push, get commit hash
 
-    - add variable for canary image in the nomad job spec
-        - ref: https://github.com/hashicorp/nomad/pull/12591
+    - ref: https://github.com/hashicorp/nomad/pull/12591
+
     - get node in eu by hitting nomad api
     - add `!=` constraint for the node
     - scale down in eu (run the nomad job spec)
+
     - take snapshot in that node (will have to ssh into the node and run the command)
+
     - create new canary group in the nomad job spec with the new upgraded image
     - add constraint for `==` node we used earlier
     - scale up in eu (run the nomad job spec) with canary group
+
     - verify the node is in sync, and healthchecks pass and all green
         - we might need to consult with Consul API
+
     - if all is well
         - repeat this for one node in US
         - if all green, raise PR
