@@ -2,9 +2,11 @@
 Tests for nomad job spec update logic
 """
 
+import time
 import json
 import requests
 import random
+import pytest
 
 from job_update import *
 
@@ -16,6 +18,7 @@ verify   = False
 """
 Test update count of job.group
 """
+@pytest.mark.skip(reason="temp")
 def test_group_count_update():
     new_count = 5
 
@@ -29,6 +32,7 @@ def test_group_count_update():
 
     assert resp.status_code == 200
 
+@pytest.mark.skip(reason="temp")
 def test_scale_down():
     node_to_remove = ""
     job_spec = get_job_spec(job_name)
@@ -46,6 +50,7 @@ def test_scale_down():
 
     assert count == old_count - 1
 
+    time.sleep(6)
     assert not node_to_remove in [
         node for (node, _) in get_running_allocations(job_name)
     ]

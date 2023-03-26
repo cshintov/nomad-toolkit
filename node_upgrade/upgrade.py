@@ -46,7 +46,7 @@ Then the first parameter should be the component name, for example `prysm` or
 """
 
 def get_image_data_from_dockerfile(component_name):
-    """Get image name from dockerfile"""
+    """Get image data from dockerfile"""
 
     # Read first line of the dockerfile, split based on space and take the
     # second element, will break if it's a multistage dockerfile.
@@ -104,6 +104,12 @@ def rest_of_the_file(filename):
     """Get the rest of the file"""
     with open(filename, "r") as file:
         return file.readlines()[1:]
+
+def get_target_image(component):
+    """Get image:tag to be updated to"""
+    image, _ = get_image_data_from_dockerfile(component)
+    target = get_version_from_branch_name(get_branch_name())
+    return f"{image}:{target}"
 
 def update_dockerfile(component, new_version):
     """Update dockerfile with new version"""

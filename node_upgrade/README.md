@@ -17,6 +17,10 @@ This script will do the following:
 - [] add constraint for `==` node we used earlier
 - [] scale up in eu (run the nomad job spec) with canary group
 
+
+- [] show diff before applying
+- [] clean up added constraints for tests
+
 - [] verify the node is in sync, and healthchecks pass and all green
   - [] we might need to consult with Consul API
 

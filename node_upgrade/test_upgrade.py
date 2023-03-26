@@ -14,15 +14,15 @@ def mock_get_branch_name():
 
 def test_get_branch_name():
     """Test get_branch_name"""
-    assert get_branch_name() == "feature/ALL-899-upgrade-goerli-prysm-to-v3.2.2"
+    assert get_branch_name() == "feature/ALL-899-upgrade-hello-bor-to-0.7.0"
 
 """
 test get_version_from_branch_name
 """
 def test_get_version_from_branch_name():
     """Test get_version_from_branch_name"""
-    assert get_version_from_branch_name("feature/ALL-899-upgrade-goerli-prysm-to-v3.2.2") == "v3.2.2"
-    assert get_version_from_branch_name("feature/ALL-899-upgrade-goerli-geth-to-v1.10.8") == "v1.10.8"
+    assert get_version_from_branch_name("feature/ALL-899-upgrade-hello-bor-to-0.7.0") == "0.7.0"
+    assert get_version_from_branch_name("feature/ALL-899-upgrade-hello-geth-to-v1.10.8") == "v1.10.8"
 
 """
 Write a test to verify that the first parameter is the component name and there exists a
@@ -33,6 +33,7 @@ def test_get_image_name_from_dockerfile():
     """Test get_image_name_from_dockerfile"""
 
     assert get_image_data_from_dockerfile("prysm") == ["gcr.io/prysmaticlabs/prysm/beacon-chain", "v3.2.0"]
+    assert get_image_data_from_dockerfile("bor") == ["ealen/echo-server", "0.6.0"]
     assert get_image_data_from_dockerfile("geth") == ["ethereum/client-go", "v1.11.3"]
 
 """
