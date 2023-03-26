@@ -118,7 +118,8 @@ def update_job(job_name, job_spec):
 def get_running_allocations(job_name):
     allocs = get_allocations(job_name)
     return [
-        (node, alloc['id']) for node, alloc in allocs.items() if alloc['status'] == "running"
+        (node, alloc['id']) 
+        for node, alloc in allocs.items() if alloc['status'] == "running"
     ]
 
 def scale_down_job(job_name):
