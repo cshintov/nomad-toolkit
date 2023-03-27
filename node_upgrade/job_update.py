@@ -51,13 +51,14 @@ def add_constraint_to_job(job_spec, node_to_scale_down):
 
 def get_running_allocations(job_name):
     allocs = get_allocations(job_name)
+
     return [
-        (node, alloc['id'])
-        for node, alloc in allocs.items() if alloc['status'] == "running"
+        (node, alloc)
+        for node, alloc, status in allocs if status == "running"
     ]
 
 def scale_down_job(job_name):
-    """ Scale down the job by 1 """
+    """ Scale down the job by 1 and returns the node"""
 
     # Get the current job spec
     job_spec = get_job_spec(job_name)
@@ -80,6 +81,7 @@ def scale_down_job(job_name):
         resp = update_job(job_name, job_spec)
         print(resp.text)
         print(resp.status_code)
+        return node_to_scale_down
     else:
         print("Exiting")
 

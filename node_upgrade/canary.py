@@ -7,9 +7,6 @@ Replace just the tag with the new image hash. Update the image in the spec. Subm
 import copy
 from utils import *
 
-def update_image(job_spec, new_image_hash):
-    pass
-
 # TODO: Adding constraint for the canary
 # TODO: Add a function to get the diff between the current job spec and the new job spec
 # TODO: What if there are multiple tasks for the same component?
@@ -55,3 +52,5 @@ def prepare_new_task_group(job_spec, target_image, task):
     new_group["Tasks"][0]["Config"]["image"] = target_image
 
     return new_group
+
+

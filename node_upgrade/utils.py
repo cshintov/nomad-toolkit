@@ -23,14 +23,11 @@ def get_allocations(job_name):
     resp = requests.get(base_url + f"/v1/job/{job_name}/allocations", verify=verify)
 
     # Print the allocation ids and nodes (names) they are running on
-    allocs = {}
-    for alloc in json.loads(resp.text):
-        allocs[alloc["NodeName"]] = {
-            'id': short_id(alloc["ID"]),
-            'status': alloc['ClientStatus']
-        }
+    return [(
+        alloc["NodeName"],
+        short_id(alloc["ID"]),
+        alloc['ClientStatus']) for alloc in json.loads(resp.text)]
 
-    return allocs
 
 def update_job(job_name, job_spec):
     """Submit the modified job spec"""

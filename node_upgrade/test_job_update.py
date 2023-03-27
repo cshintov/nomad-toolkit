@@ -54,3 +54,7 @@ def test_scale_down():
     assert not node_to_remove in [
         node for (node, _) in get_running_allocations(job_name)
     ]
+
+def test_get_allocations():
+    allocs = get_running_allocations(job_name)
+    assert len(allocs) == 2
