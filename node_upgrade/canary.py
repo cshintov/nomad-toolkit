@@ -10,7 +10,10 @@ from utils import *
 def update_image(job_spec, new_image_hash):
     pass
 
+# TODO: Adding constraint for the canary
 # TODO: Add a function to get the diff between the current job spec and the new job spec
+# TODO: What if there are multiple tasks for the same component?
+# like erigon? the node and the rpc server?
 
 """Now we need to add a canary group to the job spec. We can do that by adding
 a new task group to the job spec. We can also add a new constraint to the job

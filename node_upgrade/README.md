@@ -11,12 +11,11 @@ This script will do the following:
 - [x] add `!=` constraint for the node
 - [x] scale down in eu (run the nomad job spec)
 
-- [] take snapshot in that node (will have to ssh into the node and run the command)
+- [-] take snapshot in that node (will have to ssh into the node and run the command)
 
-- [] create new canary group in the nomad job spec with the new upgraded image
-- [] add constraint for `==` node we used earlier
-- [] scale up in eu (run the nomad job spec) with canary group
-
+- [X] create new canary group in the nomad job spec with the new upgraded image
+- [-] add constraint for `==` node we used earlier
+- [-] scale up in eu (run the nomad job spec) with canary group
 
 - [] show diff before applying
 - [] clean up added constraints for tests
