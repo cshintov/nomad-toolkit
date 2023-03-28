@@ -16,10 +16,11 @@ This script will do the following:
 - [X] create new canary group in the nomad job spec with the new upgraded image
 - [X] add constraint for `==` node we used earlier
 - [X] scale up in eu (run the nomad job spec) with canary group
-- [-] Verify health of the canary
-
-- [] show diff before applying
-- [] clean up added constraints for tests
+- [-] show diff before applying
+- [] Verify health of the canary
+   - [] Nomad health
+   - [] consul health
+- [-] System notification when a long running step is finished
 
 - [] verify the node is in sync, and healthchecks pass and all green
   - [] we might need to consult with Consul API
