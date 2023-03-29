@@ -4,6 +4,7 @@ This script will do the following:
 - [x] verify the image exist in dockerhub
     - let's start with this, sometimes we weill have to build the image from binary
 - [x] update image, push, get commit hash
+- [ ] verify the gitlab build is successful
 
 - ref: https://github.com/hashicorp/nomad/pull/12591
 
@@ -16,20 +17,27 @@ This script will do the following:
 - [X] create new canary group in the nomad job spec with the new upgraded image
 - [X] add constraint for `==` node we used earlier
 - [X] scale up in eu (run the nomad job spec) with canary group
+
+- [-] refactor
+
+- [] Create sample jobs for diff types of workloads
 - [-] show diff before applying
-- [] Verify health of the canary
+- []Verify health of the canary
    - [] Nomad health
-   - [] consul health
-- [-] System notification when a long running step is finished
+   - []consul health
+- [] System notification when a long running step is finished
 
 - [] verify the node is in sync, and healthchecks pass and all green
   - [] we might need to consult with Consul API
 
 - [] if all is well
-  - [] repeat this for one node in US
   - [] if all green, raise PR
   - [] once approved rollout deploy
   - [] either nomad job run
   - [] or tf apply
 - [] else:
     - [] rollback to previous image in that node
+
+Extras:
+- [] Standardize dockerfiles, use build argument for the VERSION, helps in automatically
+updating the version in the dockerfile.

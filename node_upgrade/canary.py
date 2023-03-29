@@ -23,34 +23,33 @@ def get_task_name(task_group, component):
     target_task = get_target_task(task_group, component)
     return target_task["Name"]
 
-def get_target_task(task_group, component):
-    """ Get the task. We will have to loop through 
+def get_target_task(task_groups, task_name):
+    """ Get the task. We will have to loop through
     the tasks in the task group and get the task by filtering
     for the component specified.
     """
     target_task = {}
-    for task in task_group["Tasks"]:
-        if component in task["Name"]:
+    for task in task_groups["Tasks"]:
+        if task_name == task["Name"]:
             target_task = task
             break
+
     return target_task
 
-def prepare_new_task_group(job_spec, target_image, task):
-    """ Prepare new task group by copying the existing task group 
+def prepare_canary_group(job_spec, target_image, task_name):
+    """ Prepare new task group by copying the existing task group
     and modifying the name, count and image.
     """
     group = job_spec["TaskGroups"][0]
+    task = get_target_task(group, task_name)
 
-    # Modify group
+    # Deepcopy the existing task group and prepare.
     new_group = copy.deepcopy(group)
     new_group["Name"] = f"{group['Name']}_canary"
     new_group["Count"] = 1
 
-    # Modify task
-    target_task = get_target_task(new_group, task)
-    target_task["Name"] = f"{task}_canary"
-    new_group["Tasks"][0]["Config"]["image"] = target_image
+    # Set the upgraded image to the canary task config.
+    task["Config"]["image"] = target_image
 
     return new_group
-
 

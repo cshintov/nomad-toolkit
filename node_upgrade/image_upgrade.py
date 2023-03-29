@@ -1,32 +1,17 @@
-#!/Users/Shinto/.pyenv/shims/python
-
 """
-Blockchain node upgrades are hard. It's manual, it's error prone, and it's a pain to do repeatedly.
-This script is a first step towards automating the upgrade process. It won't be perfect,
-but it should be a lot better than what we have now. We won't be able to do this for all
-the chains, but we can do it for the ones that are easy to upgrade, for example `litecoin`.
+The functions here helps to automatically update the version in the Dockerfile.
 
-The hardest part is how to modify the nomad job for the things we want to do, for example,
-adding a new constraint, or changing the image or adding a canary group.
+Not usable at the moment. First we have to standardize the Dockerfile with the use
+of build arguments - ARG. Then we can use them to update the Dockerfile.
 
-"""
-
-""""
-First let's do the following:
-    - get version from branch name
-        - the name will be like: `feature/ALL-899-upgrade-goerli-prysm-to-v3.2.2`
-    - verify the image exist in dockerhub
-        - let's start with this, sometimes we weill have to build the image from binary
-    - update image, push, get commit hash
+The git related functions are still used. They are wrappers around gitpython.
 """
 
 import os
+import sys
 import subprocess
+
 import git
-
-REPO_PATH = '..'
-
-repo = git.Repo(REPO_PATH)
 
 def get_branch_name():
     """Get branch name from git"""
@@ -37,7 +22,7 @@ def get_version_from_branch_name(branch_name):
     return branch_name.split("-")[-1]
 
 """
-We can get the image name from the dockerfile.So let's take it as the first
+We can get the image name from the dockerfile. So let's take it as the first
 parameter. Let's say we standardize the dockerfile names as
 component.Dockerfile. For example, `prysm.Dockerfile` or `geth.Dockerfile`.
 
@@ -66,7 +51,6 @@ def verify_image_exist_in_dockerhub(image_name, version):
     """Verify image exist in dockerhub"""
     return os.system(f"docker manifest inspect {image_name}:{version} >/dev/null") == 0
 
-""" Tests disabled for now, need to figure out how to mock gcloud. Slow. """
 def verify_image_exist_in_gcr(image_name, version):
     """Verify image exist in gcr.io"""
     command = f"""\
@@ -120,18 +104,26 @@ def update_dockerfile(component, new_version):
     new_base = f"FROM {current_image}:{new_version}\n"
     update_the_first_line(f"{component}.Dockerfile", new_base)
 
-def git_commit(message):
+
+# Git related functions
+
+def git_commit(repo, message):
     """Git commit"""
     repo.git.add(".")
-    repo.git.commit(m=message)
+    try:
+        repo.git.commit(m=message)
+    except git.exc.GitCommandError:
+        print("Nothing to commit")
+        sys.exit(1)
 
-def git_push():
+def git_push(repo):
     """ Git push to origin with current branch name"""
     repo.git.push("--set-upstream", "origin", get_branch_name())
 
-def get_commit_hash():
+def get_commit_hash(repo):
     """Git commit hash"""
     return repo.head.object.hexsha
+
 
 if __name__ == "__main__":
     branch_name = get_branch_name()

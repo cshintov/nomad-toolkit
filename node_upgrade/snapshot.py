@@ -54,4 +54,8 @@ def take_snapshot(node_name, dataset):
     """Take snapshot of the dataset"""
     snapshot_name = construct_snapshot_name(dataset)
     command = f"sudo zfs snapshot {snapshot_name}"
-    ssh_and_run_command(node_name, command)
+    choice = input(f"{node_name}: Take snapshot {command}? (y/n): ")
+    if choice == "y":
+        ssh_and_run_command(node_name, command)
+    else:
+        print("Skipping snapshot")

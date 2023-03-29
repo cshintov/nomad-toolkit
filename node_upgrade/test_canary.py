@@ -36,7 +36,7 @@ def test_add_canary_group(job_spec):
 
     new_job_spec = copy.deepcopy(job_spec)
 
-    new_task_group = prepare_new_task_group(new_job_spec, target_image, task)
+    new_task_group = prepare_canary(new_job_spec, target_image, task)
     new_job_spec["TaskGroups"].append(new_task_group)
 
     resp = update_job(job_name, new_job_spec)
@@ -63,7 +63,7 @@ def test_prepare_new_task_group():
     task = get_task_name(job_spec["TaskGroups"][0], component)
 
     target_image = get_target_image(component)
-    new_task_group = prepare_new_task_group(job_spec, target_image, task)
+    new_task_group = prepare_canary(job_spec, target_image, task)
 
     assert new_task_group["Name"] == f"{group}_canary"
     assert get_task_name(new_task_group, component) == f"{task}_canary"
@@ -90,7 +90,7 @@ def test_deploy_canary(job_spec):
 
     new_job_spec = copy.deepcopy(job_spec)
 
-    new_task_group = prepare_new_task_group(new_job_spec, target_image, task)
+    new_task_group = prepare_canary(new_job_spec, target_image, task)
     new_job_spec["TaskGroups"].append(new_task_group)
 
     resp = update_job(job_name, new_job_spec)
@@ -123,7 +123,7 @@ def test_add_canary_on_scaled_down_node(job_spec):
     task = get_task_name(spec["TaskGroups"][0], component)
 
     if len(spec["TaskGroups"]) < 2:
-        new_task_group = prepare_new_task_group(job_spec, target_image, task)
+        new_task_group = prepare_canary(job_spec, target_image, task)
         new_job_spec["TaskGroups"].append(new_task_group)
     else:
         new_task_group = copy.deepcopy(spec["TaskGroups"][1])
@@ -152,8 +152,8 @@ def test_add_canary_on_scaled_down_node(job_spec):
 
     constraint_exists = any(
         constraint == {
-            "LTarget": "${node.unique.name}", 
-            "Operand": "=", 
+            "LTarget": "${node.unique.name}",
+            "Operand": "=",
             "RTarget": scaled_down_node
         }
         for constraint in new_task_group["Constraints"]

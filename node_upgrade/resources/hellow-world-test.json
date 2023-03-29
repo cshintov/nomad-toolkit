@@ -1,0 +1,500 @@
+{
+  "Stop": false,
+  "Region": "europe-central",
+  "Namespace": "default",
+  "ID": "hello-world-test",
+  "ParentID": "",
+  "Name": "hello-world-test",
+  "Type": "service",
+  "Priority": 50,
+  "AllAtOnce": false,
+  "Datacenters": [
+    "LIM1",
+    "LIM3",
+    "HIL1"
+  ],
+  "Constraints": null,
+  "Affinities": null,
+  "Spreads": null,
+  "TaskGroups": [
+    {
+      "Name": "hello",
+      "Count": 3,
+      "Update": {
+        "Stagger": 30000000000,
+        "MaxParallel": 1,
+        "HealthCheck": "checks",
+        "MinHealthyTime": 10000000000,
+        "HealthyDeadline": 300000000000,
+        "ProgressDeadline": 600000000000,
+        "AutoRevert": false,
+        "AutoPromote": false,
+        "Canary": 0
+      },
+      "Migrate": {
+        "MaxParallel": 1,
+        "HealthCheck": "checks",
+        "MinHealthyTime": 10000000000,
+        "HealthyDeadline": 300000000000
+      },
+      "Constraints": [
+        {
+          "LTarget": "${attr.unique.hostname}",
+          "RTarget": "eu-de1-09",
+          "Operand": "!="
+        },
+        {
+          "LTarget": "${attr.consul.version}",
+          "RTarget": ">= 1.7.0",
+          "Operand": "semver"
+        }
+      ],
+      "Scaling": null,
+      "RestartPolicy": {
+        "Attempts": 2,
+        "Interval": 1800000000000,
+        "Delay": 15000000000,
+        "Mode": "fail"
+      },
+      "Tasks": [
+        {
+          "Name": "hello-bor",
+          "Driver": "docker",
+          "User": "",
+          "Config": {
+            "image": "ealen/echo-server:0.6.0"
+          },
+          "Env": null,
+          "Services": [
+            {
+              "Name": "hello-bor",
+              "TaskName": "",
+              "PortLabel": "http_bor",
+              "AddressMode": "auto",
+              "Address": "",
+              "EnableTagOverride": false,
+              "Tags": [
+                "echo"
+              ],
+              "CanaryTags": null,
+              "Checks": null,
+              "Connect": null,
+              "Meta": null,
+              "CanaryMeta": null,
+              "Namespace": "default",
+              "OnUpdate": "require_healthy",
+              "Provider": "consul"
+            }
+          ],
+          "Vault": null,
+          "Templates": null,
+          "Constraints": null,
+          "Affinities": null,
+          "Resources": {
+            "CPU": 100,
+            "Cores": 0,
+            "MemoryMB": 64,
+            "MemoryMaxMB": 0,
+            "DiskMB": 0,
+            "IOPS": 0,
+            "Networks": null,
+            "Devices": null
+          },
+          "RestartPolicy": {
+            "Attempts": 2,
+            "Interval": 1800000000000,
+            "Delay": 15000000000,
+            "Mode": "fail"
+          },
+          "DispatchPayload": null,
+          "Lifecycle": null,
+          "Meta": null,
+          "KillTimeout": 5000000000,
+          "LogConfig": {
+            "MaxFiles": 10,
+            "MaxFileSizeMB": 10
+          },
+          "Artifacts": null,
+          "Leader": false,
+          "ShutdownDelay": 0,
+          "VolumeMounts": null,
+          "ScalingPolicies": null,
+          "KillSignal": "",
+          "Kind": "",
+          "CSIPluginConfig": null
+        },
+        {
+          "Name": "hello_heimdall",
+          "Driver": "docker",
+          "User": "",
+          "Config": {
+            "image": "ealen/echo-server:0.6.0"
+          },
+          "Env": null,
+          "Services": [
+            {
+              "Name": "hello-heimdall",
+              "TaskName": "",
+              "PortLabel": "http_heimdall",
+              "AddressMode": "auto",
+              "Address": "",
+              "EnableTagOverride": false,
+              "Tags": [
+                "echo"
+              ],
+              "CanaryTags": null,
+              "Checks": null,
+              "Connect": null,
+              "Meta": null,
+              "CanaryMeta": null,
+              "Namespace": "default",
+              "OnUpdate": "require_healthy",
+              "Provider": "consul"
+            }
+          ],
+          "Vault": null,
+          "Templates": null,
+          "Constraints": null,
+          "Affinities": null,
+          "Resources": {
+            "CPU": 100,
+            "Cores": 0,
+            "MemoryMB": 64,
+            "MemoryMaxMB": 0,
+            "DiskMB": 0,
+            "IOPS": 0,
+            "Networks": null,
+            "Devices": null
+          },
+          "RestartPolicy": {
+            "Attempts": 2,
+            "Interval": 1800000000000,
+            "Delay": 15000000000,
+            "Mode": "fail"
+          },
+          "DispatchPayload": null,
+          "Lifecycle": null,
+          "Meta": null,
+          "KillTimeout": 5000000000,
+          "LogConfig": {
+            "MaxFiles": 10,
+            "MaxFileSizeMB": 10
+          },
+          "Artifacts": null,
+          "Leader": false,
+          "ShutdownDelay": 0,
+          "VolumeMounts": null,
+          "ScalingPolicies": null,
+          "KillSignal": "",
+          "Kind": "",
+          "CSIPluginConfig": null
+        }
+      ],
+      "EphemeralDisk": {
+        "Sticky": false,
+        "SizeMB": 300,
+        "Migrate": false
+      },
+      "Meta": null,
+      "ReschedulePolicy": {
+        "Attempts": 0,
+        "Interval": 0,
+        "Delay": 30000000000,
+        "DelayFunction": "exponential",
+        "MaxDelay": 3600000000000,
+        "Unlimited": true
+      },
+      "Affinities": null,
+      "Spreads": null,
+      "Networks": [
+        {
+          "Mode": "",
+          "Device": "",
+          "CIDR": "",
+          "IP": "",
+          "Hostname": "",
+          "MBits": 0,
+          "DNS": null,
+          "ReservedPorts": [
+            {
+              "Label": "http_bor",
+              "Value": 5678,
+              "To": 80,
+              "HostNetwork": "default"
+            },
+            {
+              "Label": "http_heimdall",
+              "Value": 5679,
+              "To": 80,
+              "HostNetwork": "default"
+            }
+          ],
+          "DynamicPorts": null
+        }
+      ],
+      "Consul": {
+        "Namespace": ""
+      },
+      "Services": null,
+      "Volumes": null,
+      "ShutdownDelay": null,
+      "StopAfterClientDisconnect": null,
+      "MaxClientDisconnect": null
+    },
+    {
+      "Name": "hello_canary",
+      "Count": 1,
+      "Update": {
+        "Stagger": 30000000000,
+        "MaxParallel": 1,
+        "HealthCheck": "checks",
+        "MinHealthyTime": 10000000000,
+        "HealthyDeadline": 300000000000,
+        "ProgressDeadline": 600000000000,
+        "AutoRevert": false,
+        "AutoPromote": false,
+        "Canary": 0
+      },
+      "Migrate": {
+        "MaxParallel": 1,
+        "HealthCheck": "checks",
+        "MinHealthyTime": 10000000000,
+        "HealthyDeadline": 300000000000
+      },
+      "Constraints": [
+        {
+          "LTarget": "${attr.unique.hostname}",
+          "RTarget": "eu-de1-09",
+          "Operand": "="
+        },
+        {
+          "LTarget": "${attr.consul.version}",
+          "RTarget": ">= 1.7.0",
+          "Operand": "semver"
+        }
+      ],
+      "Scaling": null,
+      "RestartPolicy": {
+        "Attempts": 2,
+        "Interval": 1800000000000,
+        "Delay": 15000000000,
+        "Mode": "fail"
+      },
+      "Tasks": [
+        {
+          "Name": "hello-bor",
+          "Driver": "docker",
+          "User": "",
+          "Config": {
+            "image": "ealen/echo-server:0.6.0"
+          },
+          "Env": null,
+          "Services": [
+            {
+              "Name": "hello-bor",
+              "TaskName": "",
+              "PortLabel": "http_bor",
+              "AddressMode": "auto",
+              "Address": "",
+              "EnableTagOverride": false,
+              "Tags": [
+                "echo"
+              ],
+              "CanaryTags": null,
+              "Checks": null,
+              "Connect": null,
+              "Meta": null,
+              "CanaryMeta": null,
+              "Namespace": "default",
+              "OnUpdate": "require_healthy",
+              "Provider": "consul"
+            }
+          ],
+          "Vault": null,
+          "Templates": null,
+          "Constraints": null,
+          "Affinities": null,
+          "Resources": {
+            "CPU": 100,
+            "Cores": 0,
+            "MemoryMB": 64,
+            "MemoryMaxMB": 0,
+            "DiskMB": 0,
+            "IOPS": 0,
+            "Networks": null,
+            "Devices": null
+          },
+          "RestartPolicy": {
+            "Attempts": 2,
+            "Interval": 1800000000000,
+            "Delay": 15000000000,
+            "Mode": "fail"
+          },
+          "DispatchPayload": null,
+          "Lifecycle": null,
+          "Meta": null,
+          "KillTimeout": 5000000000,
+          "LogConfig": {
+            "MaxFiles": 10,
+            "MaxFileSizeMB": 10
+          },
+          "Artifacts": null,
+          "Leader": false,
+          "ShutdownDelay": 0,
+          "VolumeMounts": null,
+          "ScalingPolicies": null,
+          "KillSignal": "",
+          "Kind": "",
+          "CSIPluginConfig": null
+        },
+        {
+          "Name": "hello_heimdall",
+          "Driver": "docker",
+          "User": "",
+          "Config": {
+            "image": "ealen/echo-server:0.6.0"
+          },
+          "Env": null,
+          "Services": [
+            {
+              "Name": "hello-heimdall",
+              "TaskName": "",
+              "PortLabel": "http_heimdall",
+              "AddressMode": "auto",
+              "Address": "",
+              "EnableTagOverride": false,
+              "Tags": [
+                "echo"
+              ],
+              "CanaryTags": null,
+              "Checks": null,
+              "Connect": null,
+              "Meta": null,
+              "CanaryMeta": null,
+              "Namespace": "default",
+              "OnUpdate": "require_healthy",
+              "Provider": "consul"
+            }
+          ],
+          "Vault": null,
+          "Templates": null,
+          "Constraints": null,
+          "Affinities": null,
+          "Resources": {
+            "CPU": 100,
+            "Cores": 0,
+            "MemoryMB": 64,
+            "MemoryMaxMB": 0,
+            "DiskMB": 0,
+            "IOPS": 0,
+            "Networks": null,
+            "Devices": null
+          },
+          "RestartPolicy": {
+            "Attempts": 2,
+            "Interval": 1800000000000,
+            "Delay": 15000000000,
+            "Mode": "fail"
+          },
+          "DispatchPayload": null,
+          "Lifecycle": null,
+          "Meta": null,
+          "KillTimeout": 5000000000,
+          "LogConfig": {
+            "MaxFiles": 10,
+            "MaxFileSizeMB": 10
+          },
+          "Artifacts": null,
+          "Leader": false,
+          "ShutdownDelay": 0,
+          "VolumeMounts": null,
+          "ScalingPolicies": null,
+          "KillSignal": "",
+          "Kind": "",
+          "CSIPluginConfig": null
+        }
+      ],
+      "EphemeralDisk": {
+        "Sticky": false,
+        "SizeMB": 300,
+        "Migrate": false
+      },
+      "Meta": null,
+      "ReschedulePolicy": {
+        "Attempts": 0,
+        "Interval": 0,
+        "Delay": 30000000000,
+        "DelayFunction": "exponential",
+        "MaxDelay": 3600000000000,
+        "Unlimited": true
+      },
+      "Affinities": null,
+      "Spreads": null,
+      "Networks": [
+        {
+          "Mode": "",
+          "Device": "",
+          "CIDR": "",
+          "IP": "",
+          "Hostname": "",
+          "MBits": 0,
+          "DNS": null,
+          "ReservedPorts": [
+            {
+              "Label": "http_bor",
+              "Value": 5678,
+              "To": 80,
+              "HostNetwork": "default"
+            },
+            {
+              "Label": "http_heimdall",
+              "Value": 5679,
+              "To": 80,
+              "HostNetwork": "default"
+            }
+          ],
+          "DynamicPorts": null
+        }
+      ],
+      "Consul": {
+        "Namespace": ""
+      },
+      "Services": null,
+      "Volumes": null,
+      "ShutdownDelay": null,
+      "StopAfterClientDisconnect": null,
+      "MaxClientDisconnect": null
+    }
+  ],
+  "Update": {
+    "Stagger": 30000000000,
+    "MaxParallel": 1,
+    "HealthCheck": "",
+    "MinHealthyTime": 0,
+    "HealthyDeadline": 0,
+    "ProgressDeadline": 0,
+    "AutoRevert": false,
+    "AutoPromote": false,
+    "Canary": 0
+  },
+  "Multiregion": null,
+  "Periodic": null,
+  "ParameterizedJob": null,
+  "Dispatched": false,
+  "DispatchIdempotencyToken": "",
+  "Payload": null,
+  "Meta": null,
+  "ConsulToken": "",
+  "ConsulNamespace": "",
+  "VaultToken": "",
+  "VaultNamespace": "",
+  "NomadTokenID": "",
+  "Status": "running",
+  "StatusDescription": "",
+  "Stable": true,
+  "Version": 0,
+  "SubmitTime": 1679975466054669266,
+  "CreateIndex": 3662184,
+  "ModifyIndex": 3662198,
+  "JobModifyIndex": 3662184
+}

@@ -78,6 +78,7 @@ def test_update_the_first_line():
     with open(filename, "w") as f:
         f.write(old_content)
 
+
 def test_update_dockerfile():
     """Test update_dockerfile"""
 
@@ -95,6 +96,7 @@ def test_update_dockerfile():
 
     with open(f"{component}.Dockerfile", "w") as f:
         f.write(old_content)
+
 
 #TODO: git commit, push to origin, get commit hash
 """ Now once the dockerfile is updated, we need to commit the changes and push to origin. """
